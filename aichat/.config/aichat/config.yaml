@@ -1,6 +1,8 @@
 # see https://github.com/sigoden/aichat/blob/main/config.example.yaml
 
 editor: nvim
+keybindings: vi
+cmd_prelude: role:concise
 model: openai:chatgpt-4o-latest
 clients:
   - type: openai
