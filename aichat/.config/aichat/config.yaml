@@ -1,0 +1,22 @@
+# see https://github.com/sigoden/aichat/blob/main/config.example.yaml
+
+editor: nvim
+model: openai:chatgpt-4o-latest
+clients:
+  - type: openai
+  - type: openai-compatible
+    name: giove:ollama
+    api_base: http://giove:11434/v1
+    models:
+      - name: deepseek-r1:14b
+        supports_function_calling: true
+        max_input_tokens: 131072 
+      - name: gemma3:12b
+        supports_vision: true
+        max_input_tokens: 131072 
+      - name: qwen2.5-coder:14b
+      - name: nomic-embed-text
+        type: embedding
+        default_chunk_size: 1000
+        max_batch_size: 50
+
